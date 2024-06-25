@@ -23,7 +23,7 @@
         {
           default = sbt.mkSbtDerivation.${system} {
             pname = "sn-bindgen";
-            version = "0.1.0";
+            version = "0.1.4";
             src = with pkgs.lib.fileset; toSource {
               root = ./.;
               fileset = unions [
@@ -34,7 +34,7 @@
                 ./build.sbt
               ];
             };
-            depsSha256 = "sha256-3sgPKN1/0lxSxOtetlWS/NobXIpQ6a7Ygk2GOprYIcg=";
+            depsSha256 = "sha256-MzLW1vTuPi0WRNoV806cotaz5D2DoKKiOTW6aIzmbIc=";
             buildPhase = ''
               sbt 'show buildBinary'
             '';
